@@ -1,0 +1,446 @@
+@font-face {
+  font-family: montserrat;
+  src: url("./Assests/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: montserrat-900;
+  src: url("./Assests/Montserrat/Montserrat-ExtraBold.ttf");
+}
+@font-face {
+  font-family: montserrat-800;
+  src: url("./Assests/Montserrat/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: montserrat-500;
+  src: url("./Assests/Montserrat/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: gilroy;
+  src: url("./Assests/gilroy/Gilroy-Regular.ttf");
+}
+@font-face {
+  font-family: gilroy-900;
+  src: url("./Assests/gilroy/Gilroy-ExtraBold.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+::selection {
+  background-color: white;
+  color: #95c11e;
+}
+body::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  background: #95c11e;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+
+  border-radius: 50px;
+}
+#cursor {
+  height: 2vw;
+  width: 2vw;
+  background: #95c11e;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 12;
+  transition: all 0.2s linear;
+}
+#cursor-blur {
+  height: 30vw;
+  width: 30vw;
+  background: #96c11e3c;
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(50px);
+  transition: all 0.2s linear;
+  z-index: 9;
+}
+
+#nav {
+  height: 145px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 150px;
+  gap: 50px;
+  justify-content: flex-start;
+  position: fixed;
+  z-index: 11;
+}
+
+#nav img {
+  height: 75px;
+}
+
+#nav h4 {
+  text-transform: uppercase;
+  font-family: "montserrat-500";
+}
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+
+#main {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.37);
+}
+
+#page1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 10;
+}
+#page1 h1 {
+  font-size: 8vw;
+  font-family: "montserrat-900";
+  text-transform: uppercase;
+  position: relative;
+}
+#page1 h1::before {
+  content: "Eat. Drink. Play";
+  position: absolute;
+  color: black;
+  left: -0.35vw;
+  top: -0.35vw;
+  -webkit-text-stroke: 0.2vw #95c11e;
+  z-index: -1;
+}
+#page1 h2 {
+  font-size: 30px;
+  font-size: 3vw;
+  font-family: "montserrat-800";
+  margin: 10px 0 20px 0;
+}
+#page1 p {
+  font-size: 1.5vw;
+  font-family: "montserrat-500";
+  width: 50%;
+}
+
+#page1 #arrow {
+  height: 250px;
+  width: 250px;
+  background-color: transparent;
+  border: 2px solid #95c11e;
+  position: absolute;
+  display: flex;
+  left: -2%;
+  bottom: 0%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all ease 0.5s;
+}
+#page1 #arrow i {
+  font-size: 50px;
+  font-weight: 100;
+}
+#page1 #arrow:hover {
+  scale: 0.4;
+  background-color: #95c11e;
+}
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+
+#scroller {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+#scroller-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 40s linear infinite;
+}
+#scroller h4 {
+  display: inline-block;
+  font-size: 12vw;
+  letter-spacing: 0.5vw;
+  font-family: "gilroy-900";
+  text-transform: uppercase;
+  margin-right: 1vw;
+  color: black;
+  transition: all linear 0.5s;
+  -webkit-text-stroke: 0.2vw white;
+}
+#scroller h4:hover {
+  color: #95c11e;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#about-us {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 5vw;
+  position: relative;
+  z-index: 10;
+}
+#about-us img {
+  height: 18vw;
+  width: 18vw;
+  border-radius: 2vw;
+  object-fit: cover;
+}
+#about-us-in {
+  width: 50%;
+  text-align: center;
+}
+#about-us-in h3 {
+  font-size: 4.2vw;
+  font-family: "montserrat-900";
+  text-transform: uppercase;
+  margin-bottom: 2.5vw;
+}
+#about-us-in p {
+  font-size: 1.3vw;
+  line-height: 1.5vw;
+}
+
+#cards-container {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7vw;
+  position: relative;
+  z-index: 10;
+  perspective: 1200px;
+}
+.card {
+  height: 80%;
+  width: 25%;
+  border-radius: 1vw;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 5px 5px 12px #96c11e80;
+}
+.card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  z-index: 89;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #95c11e;
+  padding: 7vw 2vw 2vw 2vw;
+  opacity: 0;
+  transition: all 0.6s ease;
+  position: absolute;
+  z-index: 99;
+}
+.overlay h4 {
+  color: #000;
+  font-size: 3vw;
+  font-family: "montserrat-800";
+  text-transform: uppercase;
+}
+.overlay p {
+  color: #000;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+#green-div {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to left bottom, #119f3a, #ace022);
+}
+#green-div h4 {
+  width: 45%;
+  line-height: 3.5vw;
+  color: black;
+  text-align: center;
+  font-size: 2vw;
+  text-transform: uppercase;
+  font-family: "montserrat-900";
+}
+#green-div img {
+  height: 100%;
+  object-fit: cover;
+  width: 14%;
+}
+
+#page3 {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#page3 > p {
+  font-size: 2.4vw;
+  font-family: "montserrat-900";
+  width: 70%;
+  line-height: 4.5vw;
+  text-align: center;
+}
+
+#page3 img {
+  position: absolute;
+  height: 6vw;
+}
+#page3 #colon1 {
+  left: 10%;
+  top: 16%;
+}
+#page3 #colon2 {
+  bottom: 12%;
+  right: 10%;
+}
+#page4 {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+}
+.elem {
+  height: 70%;
+  width: 26%;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.elem h2 {
+  height: 100%;
+  width: 100%;
+  background-color: #95c11e;
+  display: flex;
+  color: #000;
+  font-weight: 800;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.5s;
+  font-size: 2vw;
+  position: absolute;
+  z-index: 10;
+}
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 0.5s;
+  scale: 1.1;
+}
+.elem:hover h2 {
+  color: #fff;
+  background-color: transparent;
+}
+.elem:hover img {
+  scale: 1;
+}
+#page4 h1 {
+  font-size: 6.4vw;
+  position: absolute;
+  top: -15%;
+  font-weight: 900;
+  font-family: gilroy;
+  color: #000;
+  -webkit-text-stroke: 2px #fff;
+}
+
+#footer {
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6.5vw;
+  padding: 0 100px;
+}
+#footer > img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  z-index: 0;
+}
+#f1 img {
+  height: 100px;
+}
+#f1,
+#f2,
+#f3,
+#f4 {
+  width: fit-content;
+  position: relative;
+  z-index: 99;
+  /* background-color: red; */
+}
+#f2 h3 {
+  font-size: 1.6vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+#f3 h3 {
+  font-size: 1.6vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+#f4 h4 {
+  font-size: 1vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
